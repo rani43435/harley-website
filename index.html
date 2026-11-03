@@ -144,6 +144,25 @@ details p{color:#cfc7e2;margin:12px 0 0;max-width:56ch}
 #cur.big{width:74px;height:74px;margin:-37px 0 0 -37px;background:rgba(255,255,255,1)}
 @media (hover:hover) and (pointer:fine){#cur{display:block}}
 
+.stage{display:none}
+@media (max-width:760px){
+  .stage{display:block;height:40svh;pointer-events:none}
+  .hero{min-height:auto;display:block;padding-top:96px}
+  .hero .stage{height:46svh}
+  .hero h1{font-size:23vw}
+  .hero-foot{flex-direction:column;align-items:flex-start;gap:22px}
+  .manifesto{padding-top:8vh}
+  .manifesto p{max-width:none;font-size:11vw}
+  .chapter,.chapter.right{min-height:auto;display:block;padding:9vh var(--gut)}
+  .chapter .txt,.chapter.right .txt{background:none;padding-top:0}
+  .chapter h2{font-size:12vw}
+  .ar{padding-top:10vh}
+  .claude,.faq{padding-top:9vh}
+  .claude h2{font-size:12vw}
+  .end{padding-top:9vh}
+  .end h2{font-size:21vw}
+  #bubble{max-width:180px;font-size:13px}
+}
 @media (prefers-reduced-motion:reduce){.hero h1 span{animation:none}*{scroll-behavior:auto}}
 </style>
 <script type="importmap">
@@ -172,6 +191,7 @@ details p{color:#cfc7e2;margin:12px 0 0;max-width:56ch}
       <div class="kicker">AI companion · Meta Quest 3 &amp; 3S · Mixed reality</div>
       <h1 aria-label="Harley"><span>H</span><span>a</span><span>r</span><span>l</span><span>e</span><span>y</span></h1>
     </div>
+    <div class="stage" aria-hidden="true"></div>
     <div class="hero-foot">
       <p>A small purple robot who moves into your room. She talks with you, watches with you, and refuses to lose a sword fight.</p>
       <div>
@@ -187,6 +207,7 @@ details p{color:#cfc7e2;margin:12px 0 0;max-width:56ch}
   </section>
 
   <section class="manifesto" data-h="0.58,0.1,0.85,-0.4" data-say="I live here now.">
+    <div class="stage" aria-hidden="true"></div>
     <div class="kicker">Meet her</div>
     <p style="margin-top:22px">She hears you. She <em>sees what you see.</em> She remembers you tomorrow.</p>
     <div class="facts">
@@ -198,6 +219,7 @@ details p{color:#cfc7e2;margin:12px 0 0;max-width:56ch}
   </section>
 
   <section class="chapter right" id="talk" data-h="-0.42,0,1,0.35" data-say="Just say hey. I'm listening.">
+    <div class="stage" aria-hidden="true"></div>
     <div class="txt">
       <div class="num">01 Talk</div>
       <h2>Say her name. She turns around.</h2>
@@ -207,6 +229,7 @@ details p{color:#cfc7e2;margin:12px 0 0;max-width:56ch}
   </section>
 
   <section class="chapter" data-h="0.44,0,1,-0.45" data-say="Ooh. What are we looking at?">
+    <div class="stage" aria-hidden="true"></div>
     <div class="txt">
       <div class="num">02 See</div>
       <h2>She sees your room, too.</h2>
@@ -216,6 +239,7 @@ details p{color:#cfc7e2;margin:12px 0 0;max-width:56ch}
   </section>
 
   <section class="chapter right" data-h="-0.45,-0.05,0.95,0.9" data-say="Popcorn is on you.">
+    <div class="stage" aria-hidden="true"></div>
     <div class="txt">
       <div class="num">03 Watch together</div>
       <h2>Movie night for two.</h2>
@@ -224,6 +248,7 @@ details p{color:#cfc7e2;margin:12px 0 0;max-width:56ch}
   </section>
 
   <section class="chapter" data-h="0.42,0.02,1.05,-1.1" data-say="Fair warning: I don't lose.">
+    <div class="stage" aria-hidden="true"></div>
     <div class="txt">
       <div class="num">04 Duel</div>
       <h2>One mode. Impossible.</h2>
@@ -233,6 +258,7 @@ details p{color:#cfc7e2;margin:12px 0 0;max-width:56ch}
   </section>
 
   <section class="chapter right" data-h="-0.42,0.04,0.9,0.25" data-say="Pick one. I'll bring snacks.">
+    <div class="stage" aria-hidden="true"></div>
     <div class="txt">
       <div class="num">05 Worlds</div>
       <h2>Your room, somewhere else.</h2>
@@ -267,6 +293,7 @@ details p{color:#cfc7e2;margin:12px 0 0;max-width:56ch}
   </section>
 
   <section class="claude" id="claude" data-h="0.66,0.36,0.6,-0.5" data-light="1" data-say="Tell me a task. Your computer does the rest.">
+    <div class="stage" aria-hidden="true"></div>
     <div class="kicker">Harley + Claude Code</div>
     <h2>Ask Harley. Your computer gets it done.</h2>
     <p class="lead">Link Harley to Claude Code on your Mac or PC with one line. Then say "Harley, tidy my Downloads folder" from the couch, and Claude Code does it on your computer. It still asks you before it changes anything.</p>
@@ -279,6 +306,7 @@ details p{color:#cfc7e2;margin:12px 0 0;max-width:56ch}
   </section>
 
   <section class="faq" data-h="-0.6,-0.3,0.75,0.45" data-say="Ask me anything. Seriously.">
+    <div class="stage" aria-hidden="true"></div>
     <h2>Questions</h2>
     <div class="list">
       <details open><summary>Which headsets does Harley run on?</summary><p>Meta Quest 3 and Meta Quest 3S. She uses passthrough, so she lives in your real room.</p></details>
@@ -289,6 +317,7 @@ details p{color:#cfc7e2;margin:12px 0 0;max-width:56ch}
   </section>
 
   <section class="end" id="get" data-h="0.58,0.12,1,-0.35" data-say="So... are you taking me home?">
+    <div class="stage" aria-hidden="true"></div>
     <div class="kicker">Get Harley</div>
     <h2>Take her home.</h2>
     <div class="ctas">
@@ -423,7 +452,21 @@ new GLTFLoader().load(MODEL,g=>{
 /* ---------- scroll choreography ---------- */
 const secs=[...document.querySelectorAll('[data-h]')];
 const cur={x:.4,y:0,s:1,r:0,light:0},tgt={...cur};
+const mobileQ=matchMedia('(max-width:760px)');
+function readMobile(){
+  const H=innerHeight,mid=H*.5;let best=null,bd=1e9;
+  for(const s of secs){const el=s.querySelector('.stage')||s.querySelector('.phone');if(!el)continue;const r=el.getBoundingClientRect();const c=r.top+r.height*.5;const d=Math.abs(c-mid);if(d<bd){bd=d;best={s,r,c};}}
+  if(!best)return null;
+  const halfH=Math.tan(THREE.MathUtils.degToRad(camera.fov/2))*camera.position.z;
+  tgt.x=0;tgt.y=-((best.c/H)*2-1);
+  const hW=Math.min(best.r.height*.82,best.r.width*.95);tgt.s=(hW/H)*2*halfH/1.7;
+  const v=best.s.dataset.h.split(',').map(Number);tgt.r=v[3]*.35;
+  const cl=document.getElementById('claude').getBoundingClientRect();
+  tgt.light=Math.min(1,Math.max(0,Math.min((mid-cl.top)/(H*.25),(cl.bottom-mid)/(H*.25))));
+  return {el:best.s,say:best.s.dataset.say};
+}
 function readKeys(){
+  if(mobileQ.matches)return readMobile();
   const mid=innerHeight*.5;
   const pts=secs.map(s=>{const r=s.getBoundingClientRect();const v=s.dataset.h.split(',').map(Number);
     return {c:r.top+r.height*.5,x:v[0],y:v[1],s:v[2],r:v[3],light:s.dataset.light?1:0,say:s.dataset.say,el:s};});
@@ -512,15 +555,17 @@ function frame(){
   const active=readKeys();
   if(active&&active.el!==lastSec){lastSec=active.el;if(ready)say(active.say);}
   const L=1-Math.pow(.0016,dt);
-  for(const k of ['x','y','s','r','light'])cur[k]+=(tgt[k]-cur[k])*L;
+  const M=mobileQ.matches,LY=M?1-Math.pow(1e-7,dt):L;
+  for(const k of ['x','s','r','light'])cur[k]+=(tgt[k]-cur[k])*L;
+  cur.y+=(tgt.y-cur.y)*LY;
   document.body.classList.toggle('light-zone',cur.light>.5);bar.classList.toggle('scrolled',scrollY>60);
 
   /* place rig in view units */
   const dist=camera.position.z,halfH=Math.tan(THREE.MathUtils.degToRad(camera.fov/2))*dist,halfW=halfH*camera.aspect;
-  const narrow=camera.aspect<.8;
+  const narrow=camera.aspect<.8&&!M;
   const xs=narrow?Math.sign(cur.x)*Math.min(Math.abs(cur.x),.9)*.35:cur.x;
   const ys=narrow&&Math.abs(cur.x)<1.5?cur.y+.32:cur.y;
-  const sc=(narrow?.68:1)*cur.s;
+  const sc=(narrow?.68:1)*cur.s;const LR=M?.25:1;
   rig.position.set(xs*halfW,ys*halfH,0);
   const pop=popT>=0?Math.min(1,(popT+=dt)/1.1):0;const popE=pop<1?1-Math.pow(1-pop,3)*Math.cos(pop*7):1;
   rig.scale.setScalar(Math.max(.001,sc*popE));
@@ -530,7 +575,7 @@ function frame(){
   spinV*=.92;if(!drag)spin*=.94;
   const ry=cur.r+spin+look.x*.35*(1-Math.min(1,Math.abs(cur.r)));
   rig.rotation.y+=(ry-rig.rotation.y)*L;
-  rig.rotation.x+=((-look.y*.18)-rig.rotation.x)*L;
+  rig.rotation.x+=((-look.y*.18*LR)-rig.rotation.x)*L;
 
   /* bob + squash spring */
   squashV+=(-squash*60-squashV*7)*dt;squash+=squashV*dt;
