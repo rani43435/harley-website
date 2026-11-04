@@ -95,7 +95,10 @@ section{border-top:1px solid var(--line);padding:7vh 0}
 #lb .x{top:20px;right:20px}#lb .pv{left:20px;top:50%;margin-top:-26px}#lb .nx{right:20px;top:50%;margin-top:-26px}
 @media (max-width:900px){.vids{grid-template-columns:1fr 1fr}.vids .wide{grid-column:1 / -1}}
 @media (max-width:620px){.grid{grid-template-columns:1fr}.trailer{border-radius:16px}main{padding-top:100px}}
-.pics{display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:start}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.pics.two{grid-template-columns:1.6fr 1fr;margin-top:20px}
+.pic.full{grid-column:1 / -1}
+.pic figcaption{font-size:14px;color:var(--muted);margin-top:12px}
 .pic{margin:0}.pic img{width:100%;height:auto;display:block;border-radius:22px;box-shadow:inset 0 0 0 1px var(--line)}
 @media (max-width:620px){.pics{grid-template-columns:1fr}}
 </style>
@@ -132,10 +135,15 @@ section{border-top:1px solid var(--line);padding:7vh 0}
   </section>
 
   <section>
-    <h2>Pictures <small>2 SHOTS</small></h2>
+    <h2>Pictures <small>5 SHOTS</small></h2>
     <div class="pics">
+      <figure class="pic full"><img src="media/01_cover.jpg" alt="Harley, your AI companion for Meta Quest 3 and 3S" loading="lazy" width="1500" height="1000"><figcaption>Harley, your AI companion for Meta Quest 3 and 3S</figcaption></figure>
+      <figure class="pic"><img src="media/02_hello.jpg" alt="Say hi. She talks back." loading="lazy" width="1500" height="1000"><figcaption>Say hi. She talks back.</figcaption></figure>
+      <figure class="pic"><img src="media/04_watch.jpg" alt="Watch anything together." loading="lazy" width="1500" height="1000"><figcaption>Watch anything together.</figcaption></figure>
+    </div>
+    <div class="pics two">
       <figure class="pic"><img src="media/product_thumb.jpg" alt="Harley, your assistant in VR" loading="lazy" width="1280" height="720"></figure>
-      <figure class="pic tall"><img src="media/reel_thumb.jpg" alt="Harley, AI companion in mixed reality" loading="lazy"></figure>
+      <figure class="pic"><img src="media/reel_thumb.jpg" alt="Harley, AI companion in mixed reality" loading="lazy"></figure>
     </div>
   </section>
 
