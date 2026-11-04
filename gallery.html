@@ -113,7 +113,7 @@ section{border-top:1px solid var(--line);padding:7vh 0}
 <main>
   <div class="kicker">Gallery</div>
   <h1>See Harley</h1>
-  <p class="lead">Trailer, short films and real pictures of Harley on Meta Quest 3 and 3S.</p>
+  <p class="lead">The trailer and short films of Harley on Meta Quest 3 and 3S.</p>
 
   <section>
     <h2>Trailer <small>2 MIN</small></h2>
@@ -128,19 +128,8 @@ section{border-top:1px solid var(--line);padding:7vh 0}
     </div>
   </section>
 
-  <section>
-    <h2>Pictures <small>3 SHOTS</small></h2>
-    <div class="grid">
-    <figure class="shot" data-i="0"><img src="media/01_cover.jpg" alt="Harley, your AI companion for Meta Quest 3 and 3S" loading="lazy" width="1500" height="1000"><figcaption>Harley, your AI companion for Meta Quest 3 and 3S</figcaption></figure>
-    <figure class="shot" data-i="1"><img src="media/02_hello.jpg" alt="Say hi. She talks back." loading="lazy" width="1500" height="1000"><figcaption>Say hi. She talks back.</figcaption></figure>
-    <figure class="shot" data-i="2"><img src="media/04_watch.jpg" alt="Watch anything together." loading="lazy" width="1500" height="1000"><figcaption>Watch anything together.</figcaption></figure>
-    </div>
-  </section>
-
   <div class="foot"><span>© 2026 Marjy Studios</span><a class="btn btn-main" href="./#get">Get Harley</a></div>
 </main>
-
-<div id="lb" role="dialog" aria-modal="true" aria-label="Picture"><button class="x" aria-label="Close">✕</button><button class="pv" aria-label="Previous">‹</button><img alt=""><p></p><button class="nx" aria-label="Next">›</button></div>
 
 <script>
 {const bar=document.querySelector('.bar'),b=document.getElementById('menuBtn');
@@ -148,15 +137,6 @@ section{border-top:1px solid var(--line);padding:7vh 0}
 /* one video at a time */
 const vids=[...document.querySelectorAll('video')];
 vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause();})));
-/* lightbox */
-const shots=[...document.querySelectorAll('.shot')],lb=document.getElementById('lb'),li=lb.querySelector('img'),lp=lb.querySelector('p');let at=0;
-function show(i){at=(i+shots.length)%shots.length;const im=shots[at].querySelector('img');li.src=im.src;li.alt=im.alt;lp.textContent=im.alt;lb.classList.add('on');}
-shots.forEach((s,i)=>s.addEventListener('click',()=>show(i)));
-lb.querySelector('.x').onclick=()=>lb.classList.remove('on');
-lb.querySelector('.pv').onclick=e=>{e.stopPropagation();show(at-1);};
-lb.querySelector('.nx').onclick=e=>{e.stopPropagation();show(at+1);};
-lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('on');});
-addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowRight')show(at+1);if(e.key==='ArrowLeft')show(at-1);});
 </script>
 </body>
 </html>
