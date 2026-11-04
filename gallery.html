@@ -101,6 +101,10 @@ section{border-top:1px solid var(--line);padding:7vh 0}
 .pic figcaption{font-size:14px;color:var(--muted);margin-top:12px}
 .pic{margin:0}.pic img{width:100%;height:auto;display:block;border-radius:22px;box-shadow:inset 0 0 0 1px var(--line)}
 @media (max-width:620px){.pics{grid-template-columns:1fr}}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.feat{margin:0}.feat video{width:100%;display:block;border-radius:22px;background:var(--ink-2);box-shadow:inset 0 0 0 1px var(--line);aspect-ratio:3/2}
+.feat figcaption{font-size:14px;color:var(--muted);margin-top:12px}
+@media (max-width:760px){.feats{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -120,6 +124,18 @@ section{border-top:1px solid var(--line);padding:7vh 0}
   <div class="kicker">Gallery</div>
   <h1>See Harley</h1>
   <p class="lead">The trailer and short films of Harley on Meta Quest 3 and 3S.</p>
+
+  <section>
+    <h2>What she does <small>6 FEATURES</small></h2>
+    <div class="feats">
+      <figure class="feat"><video src="media/feat_learn.mp4" poster="media/feat_learn_poster.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Learn a language</figcaption></figure>
+      <figure class="feat"><video src="media/feat_sees.mp4" poster="media/feat_sees_poster.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>She sees what you see</figcaption></figure>
+      <figure class="feat"><video src="media/feat_live.mp4" poster="media/feat_live_poster.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Live answers</figcaption></figure>
+      <figure class="feat"><video src="media/feat_computer.mp4" poster="media/feat_computer_poster.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Works on your computer</figcaption></figure>
+      <figure class="feat"><video src="media/feat_memory.mp4" poster="media/feat_memory_poster.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Remembers you</figcaption></figure>
+      <figure class="feat"><video src="media/feat_apps.mp4" poster="media/feat_apps_poster.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Apps and watching together</figcaption></figure>
+    </div>
+  </section>
 
   <section>
     <h2>Trailer <small>2 MIN</small></h2>
@@ -154,7 +170,7 @@ section{border-top:1px solid var(--line);padding:7vh 0}
 {const bar=document.querySelector('.bar'),b=document.getElementById('menuBtn');
  b.addEventListener('click',()=>{const o=bar.classList.toggle('open');b.setAttribute('aria-expanded',o);});}
 /* one video at a time */
-const vids=[...document.querySelectorAll('video')];
+const vids=[...document.querySelectorAll('video[controls]')];
 vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause();})));
 </script>
 </body>
