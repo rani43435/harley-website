@@ -75,7 +75,7 @@ h2 small{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(-
 section{border-top:1px solid var(--line);padding:7vh 0}
 .trailer{position:relative;aspect-ratio:16/9;border-radius:26px;overflow:hidden;background:var(--ink-2);box-shadow:0 40px 120px rgba(138,92,255,.18),inset 0 0 0 1px var(--line)}
 .trailer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vids{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:20px;align-items:start}
+.vids{display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:start}
 .vid{margin:0}
 .vid video{width:100%;display:block;border-radius:22px;background:var(--ink-2);box-shadow:inset 0 0 0 1px var(--line)}
 .vid.tall video{aspect-ratio:9/16;object-fit:cover}
@@ -85,7 +85,7 @@ section{border-top:1px solid var(--line);padding:7vh 0}
 .shot{margin:0;cursor:zoom-in}
 .shot img{width:100%;height:auto;display:block;border-radius:20px;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s;box-shadow:inset 0 0 0 1px var(--line)}
 .shot:hover img{transform:translateY(-4px);box-shadow:0 30px 80px rgba(138,92,255,.25)}
-.shot:first-child{grid-column:1 / -1}
+.shot:last-child:nth-child(odd){grid-column:1 / -1}
 .foot{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:28px;margin-top:6vh;font-size:14px;color:var(--muted)}
 #lb{position:fixed;inset:0;z-index:20;background:rgba(8,6,14,.94);display:none;align-items:center;justify-content:center;padding:4vw}
 #lb.on{display:flex}
@@ -113,7 +113,7 @@ section{border-top:1px solid var(--line);padding:7vh 0}
 <main>
   <div class="kicker">Gallery</div>
   <h1>See Harley</h1>
-  <p class="lead">Trailers, short films and pictures of Harley on Meta Quest 3 and 3S.</p>
+  <p class="lead">Trailer, short films and real pictures of Harley on Meta Quest 3 and 3S.</p>
 
   <section>
     <h2>Trailer <small>2 MIN</small></h2>
@@ -121,18 +121,16 @@ section{border-top:1px solid var(--line);padding:7vh 0}
   </section>
 
   <section>
-    <h2>Short films <small>3 VIDEOS</small></h2>
+    <h2>Short films <small>2 VIDEOS</small></h2>
     <div class="vids">
       <figure class="vid wide"><video src="media/ad.mp4" poster="media/ad_poster.jpg" controls playsinline preload="none"></video><figcaption><b>Meet Harley</b>A 25 second ad.</figcaption></figure>
       <figure class="vid tall"><video src="media/reel.mp4" poster="media/reel_poster.jpg" controls playsinline preload="none"></video><figcaption><b>Reel</b>15 seconds.</figcaption></figure>
-      <figure class="vid tall"><video src="media/product.mp4" poster="media/product_poster.jpg" controls playsinline preload="none"></video><figcaption><b>Product film</b>16 seconds.</figcaption></figure>
     </div>
   </section>
 
   <section>
-    <h2>Pictures <small>8 SHOTS</small></h2>
+    <h2>Pictures <small>7 SHOTS</small></h2>
     <div class="grid">
-    <figure class="shot" data-i="0"><img src="media/01_cover.jpg" alt="Harley, your AI companion for Meta Quest 3 and 3S" loading="lazy" width="1500" height="1000"><figcaption>Harley, your AI companion for Meta Quest 3 and 3S</figcaption></figure>
     <figure class="shot" data-i="1"><img src="media/02_hello.jpg" alt="Say hi. She talks back." loading="lazy" width="1500" height="1000"><figcaption>Say hi. She talks back.</figcaption></figure>
     <figure class="shot" data-i="2"><img src="media/03_sees.jpg" alt="She sees what you see." loading="lazy" width="1500" height="1000"><figcaption>She sees what you see.</figcaption></figure>
     <figure class="shot" data-i="3"><img src="media/04_watch.jpg" alt="Watch anything together." loading="lazy" width="1500" height="1000"><figcaption>Watch anything together.</figcaption></figure>
